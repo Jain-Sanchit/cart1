@@ -22,7 +22,7 @@ class Products {
       products = products.map(item => {
         const { title, price } = item.fields;
         const { id } = item.sys;
-        const image = ./product-{id}.jpeg;
+        const image = item.fields.image.fields.file.url;;
         return { title, id, price, image };
       });
       return products;
